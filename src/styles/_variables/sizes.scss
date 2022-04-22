@@ -11,20 +11,39 @@ $min-width-tablet: $width-tablet;
 $min-width-desktop: $width-desktop;
 
 /* Indents */
+/* wrapper */
 $wrapper-margin-mobile-landscape: 20px;
 $wrapper-margin-tablet: 54px;
+$wrapper-userpage-margin-mobile: 10px;
+
+/* gallery */
 $gallery-grid-gap: 20px;
 $gallery-grid-row-max-height: 312px;
 $gallery-item-margin-bottom-mobile: 16px;
 
+/* card */
+$card-header-padding: 10px;
+$card-views-padding: 10px 10px 0 10px;
+
+/* user */
+$user-page-header-margin-bottom: 20px;
+$user-details-item-margin-bottom: 5px;
+$user-img-margin-right: 10px;
+$user-img-margin-right--userpage: $user-img-margin-right * 2;
+
 /* Layout width */
+/* wrapper */
 $wrapper-width-mobile: $width-mobile;
 $wrapper-width-mobile-landscape: $width-mobile-landscape - ($wrapper-margin-mobile-landscape * 2);
 $wrapper-width-tablet: $width-tablet - ($wrapper-margin-tablet * 2);
 
 /* Layout height */
+/* gallery */
 $gallery-item-height-mobile: 304px;
 $gallery-item-height-landscape: 380px;
-// $gallery-item-height-tablet: 312px;
 
+/* image */
 $image-height-tablet: 230px;
+
+/* pagination */
+$pagination-height: 60px;

@@ -1,0 +1,23 @@
+/* User */
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-title {
+  @include text-title;
+}
+
+.user-instagram {
+  @include text-base;
+}
+
+.user-img {
+  margin-right: $user-img-margin-right;
+  border-radius: 50%;
+
+  &--user-page {
+    margin-right: $user-img-margin-right--userpage;
+  }
+}

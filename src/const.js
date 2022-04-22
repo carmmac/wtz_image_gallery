@@ -7,4 +7,15 @@ const BreakPoint = {
   DESKTOP: 1000,
 };
 
+const AppRoutes = {
+  HOME: {
+    path: '/',
+    name: 'home',
+  },
+  USER_PAGE: {
+    path: '/users/:username',
+    name: 'userPage',
+  },
+};
+
 export { ACCESS_KEY, BreakPoint, AppRoutes };

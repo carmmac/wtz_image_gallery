@@ -1,0 +1,19 @@
+/* User view */
+
+.user-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $user-page-header-margin-bottom;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-details__item {
+  display: inline-block;
+  margin-bottom: $user-details-item-margin-bottom;
+}
+

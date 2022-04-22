@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="gallery-wrapper">
+    <div class="wrapper">
       <image-gallery v-if="isDataLoaded" />
       <loading v-else />
     </div>

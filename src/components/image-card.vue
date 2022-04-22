@@ -1,11 +1,11 @@
 <template>
   <div class="card">
     <div class="card__header">
-      <img class="author-img" :src="getUserAvatar" alt="Avatar" width="30" height="30" />
-      <div class="author-info">
-        <span class="author-title">{{ getUserFullName }}</span>
-        <span class="author-link">{{ getUserSocialLink }}</span>
-      </div>
+      <img class="user-img" :src="getUserAvatar" alt="Avatar" width="30" height="30" />
+      <router-link :to="getUserRoute" class="user-info">
+        <span class="user-title">{{ getUserFullName }}</span>
+        <span class="user-instagram">{{ getUserSocialLink }}</span>
+      </router-link>
     </div>
     <div class="card__img-container">
       <img class="card__img" :src="getUrl(windowWidth)" alt="Picture" :style="getStyle" />
@@ -19,7 +19,7 @@
 
 <script>
 import { getSocialUsername } from '../_utils';
-import { BreakPoint } from '../const';
+import { BreakPoint, AppRoutes } from '../const';
 
 export default {
   name: 'ImageCard',
@@ -53,8 +53,13 @@ export default {
     getUserAvatar() {
       return this.user.profile_image.small;
     },
-    getImgUrl() {
-      return this.imgUrls.small;
+    getUserRoute() {
+      return {
+        name: AppRoutes.USER_PAGE.name,
+        params: {
+          username: this.user.username,
+        },
+      };
     },
     getStyle() {
       return `background-color: ${this.imageBgColor}`;
