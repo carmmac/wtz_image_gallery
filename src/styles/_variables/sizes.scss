@@ -1,0 +1,30 @@
+/* Device width */
+$width-mobile: 320px;
+$width-mobile-landscape: 480px;
+$width-tablet: 768px;
+$width-desktop: 1000px;
+
+/* Breakpoints */
+$min-width-mobile: $width-mobile;
+$min-width-mobile-landscape: $width-mobile-landscape;
+$min-width-tablet: $width-tablet;
+$min-width-desktop: $width-desktop;
+
+/* Indents */
+$wrapper-margin-mobile-landscape: 20px;
+$wrapper-margin-tablet: 54px;
+$gallery-grid-gap: 20px;
+$gallery-grid-row-max-height: 312px;
+$gallery-item-margin-bottom-mobile: 16px;
+
+/* Layout width */
+$wrapper-width-mobile: $width-mobile;
+$wrapper-width-mobile-landscape: $width-mobile-landscape - ($wrapper-margin-mobile-landscape * 2);
+$wrapper-width-tablet: $width-tablet - ($wrapper-margin-tablet * 2);
+
+/* Layout height */
+$gallery-item-height-mobile: 304px;
+$gallery-item-height-landscape: 380px;
+// $gallery-item-height-tablet: 312px;
+
+$image-height-tablet: 230px;

@@ -13,7 +13,6 @@
   }
 
   @media (min-width: $min-width-desktop) {
-    max-width: $wrapper-width-desktop;
     padding: 0;
     margin: 0 auto;
   }
@@ -23,13 +22,14 @@
   @media (min-width: $min-width-tablet) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    grid-auto-rows: minmax(312px, auto);
+    grid-gap: $gallery-grid-gap;
+    grid-auto-rows: $gallery-grid-row-max-height;
   }
 }
 
 .gallery-item{
-  margin-bottom: 16px;
+  // height: $gallery-item-height-mobile;
+  margin-bottom: $gallery-item-margin-bottom-mobile;
 
   @media (min-width: $min-width-mobile-landscape) {
     margin-bottom: 0;

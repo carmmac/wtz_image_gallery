@@ -1,0 +1,12 @@
+/* Text mixins */
+@mixin text-title {
+  font-size: $font-size-base;
+  font-weight: $font-weight-bold;
+  color: $font-color-title;
+}
+
+@mixin text-base {
+  font-size: $font-size-base;
+  font-weight: $font-weight-regular;
+  color: $font-color-base;
+}

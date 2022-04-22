@@ -7,10 +7,8 @@
         <span class="author-link">{{ getUserSocialLink }}</span>
       </div>
     </div>
-    <div class="card__img-wrapper">
-      <div class="card__img-container">
-        <img class="card__img" :src="getUrl(windowWidth)" alt="Picture" :style="getStyle" />
-      </div>
+    <div class="card__img-container">
+      <img class="card__img" :src="getUrl(windowWidth)" alt="Picture" :style="getStyle" />
     </div>
     <div class="card__views">
       <span class="views-count">51 200</span>

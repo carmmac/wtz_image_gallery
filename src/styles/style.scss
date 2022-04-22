@@ -1,0 +1,16 @@
+/* Style compilation */
+
+/* BASE */
+@import "../../node_modules/normalize-scss/sass/normalize/import-now";
+@import "./base/reset";
+@import "./_variables/index.scss";
+@import "./_mixins/index.scss";
+
+/* COMPONENTS */
+@import "./components/index.scss";
+
+/* VIEWS */
+@import "./views/index.scss";
+
+/* LAYOUT */
+@import "./layout/index.scss";
