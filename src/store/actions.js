@@ -1,6 +1,8 @@
 /* eslint-disable no-console */
 import { MutationType } from './mutations';
 
+const ACCESS_KEY = 'cJpFuZeZgYr52cfiuHMIN4raxKQkI9MLy1vvdPfzUsU';
+
 const ActionType = {
   FETCH_PHOTOS: 'fetchPhotos',
 };
@@ -9,7 +11,7 @@ const actions = {
   [ActionType.FETCH_PHOTOS]: async ({ commit }) => {
     try {
       const response = await fetch(
-        'https://api.unsplash.com/photos/?client_id=cJpFuZeZgYr52cfiuHMIN4raxKQkI9MLy1vvdPfzUsU',
+        `https://api.unsplash.com/photos/?client_id=${ACCESS_KEY}`,
       );
       if (response.ok) {
         const data = await response.json();

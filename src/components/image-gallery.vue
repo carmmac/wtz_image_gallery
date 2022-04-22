@@ -1,7 +1,7 @@
 <template>
   <ul class="gallery">
-    <li class="gallery-item" v-for="({id, user, urls, color}) in photos" :key="`photo-${id}`">
-      <image-card :user="user" :imgUrls="urls" :imageBgColor="color"/>
+    <li class="gallery-item" v-for="{ id, user, urls, color } in photos" :key="`photo-${id}`">
+      <image-card :user="user" :imgUrls="urls" :imageBgColor="color" />
     </li>
   </ul>
 </template>
