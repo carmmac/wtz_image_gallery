@@ -19,3 +19,8 @@
   font-weight: $font-weight-regular;
   color: $font-color-pagination;
 }
+
+@mixin text-pagination--selected {
+  font-size: $font-size-pagination-selected;
+  font-weight: $font-weight-bold;
+}

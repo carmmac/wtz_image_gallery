@@ -1,0 +1,16 @@
+/* Button */
+
+.button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+
+  &--pagination {
+    margin-right: $button-pagination-margin-right;
+    background-color: transparent;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

@@ -11,8 +11,12 @@
   max-width: $width-mobile;
   margin: 0 auto;
   text-align: center;
-}
 
-.pagination span {
-  @include text-pagination
+  &__item {
+    @include text-pagination;
+
+    &--selected {
+      @include text-pagination--selected;
+    }
+  }
 }
