@@ -1,10 +1,8 @@
 <template>
   <div class="card">
     <div class="card__header">
-      <img class="user-img" :src="getUserAvatar" alt="Avatar" width="30" height="30" />
-      <router-link :to="getUserRoute" class="user-info">
-        <span class="user-title">{{ getUserFullName }}</span>
-        <span class="user-instagram">{{ getUserSocialLink }}</span>
+      <router-link :to="getUserRoute">
+        <user-info :user="user" />
       </router-link>
     </div>
     <div class="card__img-container">
@@ -18,8 +16,8 @@
 </template>
 
 <script>
-import { getSocialUsername } from '../_utils';
 import { BreakPoint, AppRoutes } from '../const';
+import UserInfo from './user-info.vue';
 
 export default {
   name: 'ImageCard',
@@ -43,16 +41,8 @@ export default {
       default: '#FFFFFF',
     },
   },
+  components: { UserInfo },
   computed: {
-    getUserFullName() {
-      return `${this.user.first_name} ${this.user.last_name ?? ''}`;
-    },
-    getUserSocialLink() {
-      return this.user.instagram_username && getSocialUsername(this.user.instagram_username);
-    },
-    getUserAvatar() {
-      return this.user.profile_image.small;
-    },
     getUserRoute() {
       return {
         name: AppRoutes.USER_PAGE.name,
