@@ -1,12 +1,5 @@
 /* User-profile component */
 
-.user-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: $user-page-header-margin-bottom;
-}
-
 .user-details {
   display: flex;
   flex-direction: column;
@@ -16,4 +9,3 @@
   display: inline-block;
   margin-bottom: $user-details-item-margin-bottom;
 }
-

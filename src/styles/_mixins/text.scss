@@ -6,11 +6,21 @@
   color: $font-color-title;
 }
 
+@mixin text-title--user-page {
+  font-size: $font-size-title-user-page;
+  line-height: $line-height-title-user-page;
+}
+
 @mixin text-base {
   font-size: $font-size-base;
   line-height: $line-height-base;
   font-weight: $font-weight-regular;
   color: $font-color-base;
+}
+
+@mixin text-base--user-page {
+  font-size: $font-size-info-user-page;
+  line-height: $line-height-info-user-page;
 }
 
 @mixin text-pagination {

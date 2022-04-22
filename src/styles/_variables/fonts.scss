@@ -10,7 +10,11 @@ $font-weight-regular: 400;
 $font-size-base: 12px;
 $font-size-pagination: 14px;
 $font-size-pagination-selected: 18px;
+$font-size-title-user-page: $font-size-base * 2;
+$font-size-info-user-page: $font-size-base * 1.5;
 
 /* Line-height */
 $line-height-base: $font-size-base + 2px;
 $line-height-pagination: 60px;
+$line-height-title-user-page: $font-size-title-user-page + 2px;
+$line-height-info-user-page: $font-size-info-user-page + 2px;

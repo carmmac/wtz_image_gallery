@@ -3,9 +3,21 @@
 .user-info {
   display: flex;
   align-items: center;
+
+  &--user-page {
+    margin-bottom: $user-page-header-margin-bottom;
+    
+    & .user-name {
+      @include text-title--user-page;
+    }
+
+    & .user-instagram {
+      @include text-base--user-page;
+    }
+  }
 }
 
-.user-title {
+.user-name {
   @include text-title;
 }
 
