@@ -1,7 +1,11 @@
 /* eslint-disable no-console */
+import { ACCESS_KEY } from '@/const';
+import { createApi } from 'unsplash-js';
 import { MutationType } from './mutations';
 
-const ACCESS_KEY = 'cJpFuZeZgYr52cfiuHMIN4raxKQkI9MLy1vvdPfzUsU';
+const api = createApi({
+  accessKey: ACCESS_KEY,
+});
 
 const ActionType = {
   FETCH_PHOTOS: 'fetchPhotos',
@@ -10,16 +14,12 @@ const ActionType = {
 const actions = {
   [ActionType.FETCH_PHOTOS]: async ({ commit }) => {
     try {
-      const response = await fetch(
-        `https://api.unsplash.com/photos/?client_id=${ACCESS_KEY}`,
-      );
-      if (response.ok) {
-        const data = await response.json();
-        commit(MutationType.SET_DATA_LOAD_INDICATOR, true);
-        commit(MutationType.SET_PHOTOS, data);
-      } else {
-        console.error(`Request failed with status: ${response.status}`);
-      }
+      const { response } = await api.photos.list({ page: 1, perPage: 8 });
+      commit(MutationType.SET_GALLERY_LOAD_INDICATOR, true);
+      commit(MutationType.SET_PHOTOS, response.results);
+    } catch (error) {
+      console.error(`Server error: ${error.message}`);
+    }
     } catch (error) {
       console.error(`Server error: ${error.message}`);
     }

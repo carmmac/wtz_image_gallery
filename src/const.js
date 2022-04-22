@@ -1,3 +1,5 @@
+const ACCESS_KEY = 'cJpFuZeZgYr52cfiuHMIN4raxKQkI9MLy1vvdPfzUsU';
+
 const BreakPoint = {
   MOBILE: 320,
   MOBILE_LANDSCAPE: 480,
@@ -5,5 +7,4 @@ const BreakPoint = {
   DESKTOP: 1000,
 };
 
-// eslint-disable-next-line import/prefer-default-export
-export { BreakPoint };
+export { ACCESS_KEY, BreakPoint, AppRoutes };
