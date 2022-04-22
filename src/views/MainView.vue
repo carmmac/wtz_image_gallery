@@ -1,7 +1,10 @@
 <template>
-  <div class="gallery-wrapper">
-    <image-gallery v-if="isDataLoaded" />
-    <loading v-else />
+  <div>
+    <div class="gallery-wrapper">
+      <image-gallery v-if="isDataLoaded" />
+      <loading v-else />
+    </div>
+    <pagination />
   </div>
 </template>
 
@@ -11,10 +14,11 @@ import { State } from '@/store/state';
 import { mapActions, mapState } from 'vuex';
 import Loading from '../components/loading.vue';
 import ImageGallery from '../components/image-gallery.vue';
+import Pagination from '../components/pagination.vue';
 
 export default {
   name: 'MainView',
-  components: { ImageGallery, Loading },
+  components: { ImageGallery, Loading, Pagination },
   created() {
     this.loadPhotos();
   },
