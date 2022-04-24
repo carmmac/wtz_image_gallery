@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="card__header">
-      <router-link :to="getUserRoute">
+      <router-link :to="getUserRoute" target="_blank">
         <user-info :user="user" />
       </router-link>
     </div>
