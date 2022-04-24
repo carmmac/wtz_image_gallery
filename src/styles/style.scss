@@ -2,7 +2,7 @@
 
 /* BASE */
 @import "../../node_modules/normalize-scss/sass/normalize/import-now";
-@import "./base/reset";
+@import "./base/index.scss";
 @import "./_variables/index.scss";
 @import "./_mixins/index.scss";
 

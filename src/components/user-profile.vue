@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1 class="visually-hidden">User profile</h1>
     <user-info :user="user" />
     <div class="user-details">
       <span v-if="user.bio" class="user-details__item">{{ user.bio }}</span>
