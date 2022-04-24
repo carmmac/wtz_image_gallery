@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper wrapper--user-page">
+  <div class="page__wrapper page__wrapper--user-page">
     <user-profile v-if="isUserLoaded" />
     <loading v-else />
   </div>
